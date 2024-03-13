@@ -44,6 +44,7 @@ dependencies {
     val fragment_version = "1.6.2"
     val activity_version = "1.8.2"
     val retrofit_version = "2.9.0"
+    val nav_version = "2.7.7"
 
 
     implementation("androidx.core:core-ktx:1.12.0")
@@ -69,5 +70,8 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2")
     //Picasso
     implementation("com.squareup.picasso:picasso:2.8")
+    //NavComponent
+    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
+    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
 
 }

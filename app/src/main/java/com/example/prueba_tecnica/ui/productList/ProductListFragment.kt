@@ -16,7 +16,6 @@ class ProductListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentProductListBinding.inflate(inflater, container, false)
-        // Inflate the layout for this fragment
         return binding.root
     }
 }
