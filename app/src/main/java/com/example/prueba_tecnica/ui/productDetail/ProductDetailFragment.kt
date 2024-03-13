@@ -6,8 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.prueba_tecnica.databinding.FragmentProductDetailBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class ProductDetailFragment : Fragment() {
     private var _binding: FragmentProductDetailBinding? = null
     private val binding get() = _binding!!
