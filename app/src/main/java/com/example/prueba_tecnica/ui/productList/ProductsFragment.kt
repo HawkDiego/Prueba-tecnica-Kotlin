@@ -27,6 +27,7 @@ class ProductsFragment : Fragment() {
         savedInstanceState: Bundle?
     ) {//cuando la vista ya esta creada
         super.onViewCreated(view, savedInstanceState)
+        productViewModel.getProducts()
         initUI()
     }
 

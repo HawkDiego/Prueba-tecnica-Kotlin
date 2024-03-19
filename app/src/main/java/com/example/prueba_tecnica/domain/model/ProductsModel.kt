@@ -3,15 +3,15 @@ package com.example.prueba_tecnica.domain.model
 import com.google.gson.annotations.SerializedName
 
 data class ProductModel(
-    @SerializedName("id") val id: Int,
-    @SerializedName("title") val title: String,
-    @SerializedName("description") val description: String,
-    @SerializedName("price") val price: Int,
-    @SerializedName("discount_percentage") val discountPercentage: Double,
-    @SerializedName("rating") val rating: Double,
-    @SerializedName("stock") val stock: Int,
-    @SerializedName("brand") val brand: String,
-    @SerializedName("category") val category: String,
-    @SerializedName("thumbnail") val thumbnail: String,
-    @SerializedName("images") val images: String
+    val id: Int,
+    val title: String,
+    val description: String,
+    val price: Int,
+    val discountPercentage: Double,
+    val rating: Double,
+    val stock: Int,
+    val brand: String,
+    val category: String,
+    val thumbnail: String,
+    val images: List<String>
 )

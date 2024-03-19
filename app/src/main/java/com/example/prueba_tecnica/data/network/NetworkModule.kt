@@ -1,5 +1,7 @@
 package com.example.prueba_tecnica.data.network
 
+import com.example.prueba_tecnica.data.RepositoryImpl
+import com.example.prueba_tecnica.domain.Repository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -24,5 +26,10 @@ object NetworkModule {
     @Provides
     fun provideProductApiService(retrofit: Retrofit): ProductApiService {
         return retrofit.create(ProductApiService::class.java)
+    }
+
+    @Provides
+    fun provideRepository(apiService: ProductApiService): Repository {
+        return RepositoryImpl(apiService)
     }
 }

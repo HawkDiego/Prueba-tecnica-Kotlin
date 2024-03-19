@@ -1,5 +1,6 @@
 package com.example.prueba_tecnica.data.network
 
+import com.example.prueba_tecnica.domain.model.ProductModel
 import com.google.gson.annotations.SerializedName
 
 data class ProductResponse(
@@ -14,4 +15,20 @@ data class ProductResponse(
     @SerializedName("category") val category: String,
     @SerializedName("thumbnail") val thumbnail: String,
     @SerializedName("images") val images: List<String>
-)
+) {
+    fun toDomain(): ProductModel {//Aca puedo modificar la informacion como yo quiera
+        return ProductModel(
+            id = id,
+            title = title,
+            description = description,
+            price = price,
+            discountPercentage = discountPercentage,
+            rating = rating,
+            stock = stock,
+            brand = brand,
+            category = category,
+            thumbnail = thumbnail,
+            images = images
+        )
+    }
+}
